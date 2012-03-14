@@ -15,13 +15,14 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+-- Force utf8
+set names utf8;
+
 --
 -- Table structure for table `posts`
 --
 
 DROP TABLE IF EXISTS `posts`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `posts` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -29,7 +30,6 @@ CREATE TABLE `posts` (
   `post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `posts`
@@ -46,8 +46,6 @@ UNLOCK TABLES;
 --
 
 DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL,
@@ -58,7 +56,6 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_username` (`username`),
   KEY `users_username_password` (`username`,`password`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `users`
