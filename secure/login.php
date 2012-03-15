@@ -1,5 +1,5 @@
 <?php
-require 'sqlidb.class.php';
+require '../sqlidb.class.php';
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
   $login = $db->secureLogin($_POST['username'], $_POST['password']);

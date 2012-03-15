@@ -1,5 +1,5 @@
 <?php
-require 'sqlidb.class.php';
+require '../sqlidb.class.php';
 
 $posts = $db->getPosts();
 
