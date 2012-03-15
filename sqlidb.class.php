@@ -91,5 +91,6 @@ class sqlidb {
 }
 
 # Common stuff
+set_magic_quotes_runtime(FALSE);
 session_start();
 $db = new sqlidb('mysql:dbname=sqli;host=localhost', 'DB-USERNAME', 'DB-PASSWORD');
